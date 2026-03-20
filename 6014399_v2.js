@@ -10,7 +10,7 @@ function drawPoint(ctx, x, y, size) {
 }
 
 //convierte coordenadas del canvas a plano cartesiano 
-function canvasToCartesiana(p1, height) {
+function canvasToCartesiana(p1) {
     return [p1.x, height - p1.y];
 }
 //dibuja la cuadrícula y los números de los ejes
