@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<!--título de la pestaña del navegador-->
+<title>Generador de Triángulos</title>
+</head>
+<body>
+<!--título de la aplicación-->
+<h1 align="center">Generador de Triángulos</h1>
+<!--informa al usuario que se usan los algorítmos DDA y Bresenham-->
+<p align="center">
+Uso de algoritmos de línea DDA y Bresenham
+</p>
+<!--ingreso de las coordenadas-->
+<h3 align="center">Ingreso de coordenadas</h3>
+<center>
+<!--hace que X y Y queden en el centro uno al lado del otro-->
+<table>
+<tr>
+<th>Punto</th>
+<th>X</th>
+<th>Y</th>
+</tr>
+<!--punto 1-->
+<tr>
+<td>P1</td>
+<td><input type="number" id="x1"></td>
+<td><input type="number" id="y1"></td>
+</tr>
+<!--punto 2-->
+<tr>
+<td>P2</td>
+<td><input type="number" id="x2"></td>
+<td><input type="number" id="y2"></td>
+</tr>
+<!--punto 3-->
+<tr>
+<td>P3</td>
+<td><input type="number" id="x3"></td>
+<td><input type="number" id="y3"></td>
+</tr>
+</table>
+</center>
+
+<!--permite escoger entre DDA o Bresenham-->
+<p align="center">
+Método de dibujo:
+<select id="metodo">
+<option value="dda">DDA</option>
+<option value="bres">Bresenham</option>
+</select>
+</p>
+
+<!--modificar el grosor de la línea-->
+<p align="center">
+Grosor de línea:
+<input type="number" id="grosor" value="2" min="1" max="10">
+</p>
+
+<!--botón que ejecuta la creación del triángulo-->
+<p align="center">
+<button onclick="crearTriangulo()">Crear triángulo</button>
+</p>
+<!--botón que limpia el canvas-->
+<p align="center">
+<button onclick="limpiarCanvas()">Limpiar canvas</button>
+</p>
+
+<!--aquí sale si los puntos forman o no un triángulo-->
+<p id="mensaje" align="center"></p>
+
+<!--canvas donde se dibuja el plano cartesiano-->
+<p align="center">
+<canvas id="canvas" width="500" height="500"></canvas>
+</p>
+<!--conexión con el archivo js-->
+<script src="6014399_v2.js"></script>
+</body>
+</html>
