@@ -85,16 +85,8 @@ function drawBresenham(x1, y1, x2, y2, size) {
         drawPoint(ctx, x1, y1, size);
         if (x1 == x2 && y1 == y2) break;
         let e2 = 2 * err;
-
-        if (e2 > -dy) {
-            err -= dy;
-            x1 += sx;
-        }
-
-        if (e2 < dx) {
-            err += dx;
-            y1 += sy;
-        }
+        if (e2 > -dy) {err -= dy; x1 += sx;}
+        if (e2 < dx) {err += dx; y1 += sy;}
     }
 }
 //función general para dibujar línea
