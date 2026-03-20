@@ -91,11 +91,7 @@ function drawBresenham(x1, y1, x2, y2, size) {
 }
 //función general para dibujar línea
 function drawLine(x1, y1, x2, y2, size, method) {
-    if (method == "dda") {
-        drawDDA(x1, y1, x2, y2, size);
-    } else {
-        drawBresenham(x1, y1, x2, y2, size);
-    }
+    (method === "dda" ? drawDDA : drawBresenham)(x1, y1, x2, y2, size);
 }
 //función principal del programa
 function crearTriangulo() {
