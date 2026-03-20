@@ -50,13 +50,9 @@ function convertY(y) {
 //verifica si los tres puntos forman un triángulo
 function esTriangulo(x1, y1, x2, y2, x3, y3) {
     //verifica que ambas rectas sean verticales
-    if ((x2 == x1) && (x3 == x1)) {
-        return false;
-    }
+    if ((x2 == x1) && (x3 == x1)) return false;
     //cuando una recta es vertical, las pendientes no pueden ser iguales
-    if ((x2 == x1) || (x3 == x1)) {
-        return true;
-    }
+    if ((x2 == x1) || (x3 == x1)) return true;
     //si ninguna es vertical, la pendiente se calcula normal
     let m1 = (y2 - y1) / (x2 - x1);
     let m2 = (y3 - y1) / (x3 - x1);
