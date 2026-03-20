@@ -20,18 +20,22 @@ function drawGrid() {
     ctx.font = "12px Arial";
 
     for (let i = 0; i <= tamaño; i += paso) {
+        // líneas verticales
         ctx.beginPath();
         ctx.moveTo(inicio + i, inicio);
         ctx.lineTo(inicio + i, inicio + tamaño);
         ctx.stroke();
-        ctx.fillText(i / paso, inicio + i - 5, inicio + tamaño + 15);
-    }
 
-    for (let i = 0; i <= tamaño; i += paso) {
+        // líneas horizontales
         ctx.beginPath();
         ctx.moveTo(inicio, inicio + i);
         ctx.lineTo(inicio + tamaño, inicio + i);
         ctx.stroke();
+
+        // números eje X
+        ctx.fillText(i / paso, inicio + i - 5, inicio + tamaño + 15);
+
+        // números eje Y
         ctx.fillText((tamaño - i) / paso, inicio - 20, inicio + i + 5);
     }
 }
